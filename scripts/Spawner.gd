@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var enemy = preload("res://Scenes/Enemy.tscn")
+@onready var enemy = preload("res://scenes/Enemy.tscn")
 
 @export var spawn_rate: float = 0.3
 

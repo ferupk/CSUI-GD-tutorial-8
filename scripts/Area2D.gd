@@ -4,4 +4,4 @@ extends Area2D
 
 func _on_Area_Trigger_body_entered(body):
 	if body.get_name() == "Player":
-		get_tree().change_scene_to_file(str("res://Scenes/" + sceneName + ".tscn"))
+		get_tree().call_deferred('change_scene_to_file', str("res://scenes/" + sceneName + ".tscn"))

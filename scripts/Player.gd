@@ -34,7 +34,7 @@ func _physics_process(delta):
 	move_and_slide()
 	velocity = velocity
 
-func _process(delta):
+func _process(_delta):
 	if velocity.y != 0:
 		animator.play("Jump")
 	elif velocity.x != 0:

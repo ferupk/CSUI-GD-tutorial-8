@@ -6,7 +6,7 @@ extends CharacterBody2D
 const UP = Vector2(0,-1)
 
 
-func _process(delta):
+func _process(_delta):
 
 	if position.y >= 600:
 		queue_free() 
