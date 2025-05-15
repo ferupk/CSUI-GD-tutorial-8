@@ -1,2 +1,4 @@
 res://default_env.tres
+res://scenes/Player.tscn
 res://scenes/Level 1.tscn
+res://scripts/Player.gd

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://beg452kqkfydx"]
+[gd_scene load_steps=10 format=3 uid="uid://beg452kqkfydx"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://d2oej36eq8vvl" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_alien.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dpnuijhsx0eak" path="res://assets/kenney_platformerpack/PNG/Particles/brickGrey_small.png" id="3_2lj6o"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(52.924, 76.884)
@@ -63,10 +64,18 @@ _data = {
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e0tsl"]
 particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
+emission_shape = 3
+emission_box_extents = Vector3(30, 1, 1)
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, -200, 0)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1")
+speed = null
+GRAVITY = null
+jump_speed = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
@@ -86,4 +95,8 @@ libraries = {
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, 30)
+amount = 4
 process_material = SubResource("ParticleProcessMaterial_e0tsl")
+texture = ExtResource("3_2lj6o")
+lifetime = 0.5
