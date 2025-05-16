@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export var speed: int = 400
 @export var GRAVITY: int = 1400

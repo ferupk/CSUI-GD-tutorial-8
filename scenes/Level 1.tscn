@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cbrrsfnbg3p0g" path="res://scenes/Spawner.tscn" id="1_yaxqa"]
 [ext_resource type="Texture2D" uid="uid://r37ts0nyebjk" path="res://assets/Familiar Looking Rocket.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dko3gsbegf0rc" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_stone.png" id="4_gjmf8"]
-[ext_resource type="PackedScene" path="res://scenes/Area Trigger.tscn" id="4_t7cob"]
+[ext_resource type="PackedScene" uid="uid://bts70i4gu518x" path="res://scenes/Area Trigger.tscn" id="4_t7cob"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_iuywq"]
 particle_flag_disable_z = true
@@ -69,17 +69,16 @@ trail_lifetime = 0.1
 
 [node name="Spawner" parent="." instance=ExtResource("1_yaxqa")]
 position = Vector2(1700, 280)
-spawn_rate = 1.2
+spawn_rate = 1.08
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2170.27, 73.2836)
 texture = ExtResource("3")
 
 [node name="Area3D Trigger" parent="Sprite2D" instance=ExtResource("4_t7cob")]
+position = Vector2(-2, 3)
+scale = Vector2(14.4, 24)
 sceneName = "Win Screen"
-
-[node name="Area3D Trigger2" parent="." instance=ExtResource("4_t7cob")]
-position = Vector2(2170.27, 73.2836)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -89,4 +88,6 @@ tile_set = SubResource("TileSet_5i4ah")
 
 [node name="Player" parent="." instance=ExtResource("1")]
 position = Vector2(135.152, 106.001)
+speed = 400
+GRAVITY = 1400
 jump_speed = -500

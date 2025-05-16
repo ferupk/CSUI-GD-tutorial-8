@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbj425a8bldtb"]
 
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://d3sjm662mv7dm" path="res://Assets/kenney_platformerpack/PNG/Enemies/mouse.png" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/Area Trigger.tscn" id="3_5vx5k"]
+[ext_resource type="Texture2D" uid="uid://d3sjm662mv7dm" path="res://assets/kenney_platformerpack/PNG/Enemies/mouse.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://bts70i4gu518x" path="res://scenes/Area Trigger.tscn" id="3_5vx5k"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(52.924, 31.4302)
@@ -20,4 +20,4 @@ vframes = 2
 frame = 1
 
 [node name="Area3D Trigger2" parent="." instance=ExtResource("3_5vx5k")]
-scale = Vector2(0.172685, 0.0830508)
+scale = Vector2(3, 2)
